@@ -84,3 +84,6 @@ df.datum.max()
 # %%
 df.datum = pd.to_datetime(df.datum, format="%Y%m")
 px.line(df, x="datum", y="suv_share", template="plotly_white")
+
+
+# %%
