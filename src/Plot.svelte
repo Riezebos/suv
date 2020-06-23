@@ -3,7 +3,6 @@
 
   // window.PLOTLYENV = window.PLOTLYENV || {};
 
-
   let url = `https://opendata.rdw.nl/api/id/m9d7-ebf2.json?$query=
 SELECT 
     floor(datum_eerste_toelating/100) AS datum,
@@ -28,6 +27,7 @@ GROUP BY datum`;
       x_data.push(datum);
       y_data.push(line.aantal);
     }
+
     Plotly.newPlot(
       "082cb85f-436e-4333-a636-54da6de7ff2c",
       [
@@ -429,7 +429,7 @@ GROUP BY datum`;
       },
       { responsive: true }
     );
-  }
+  };
 </script>
 
 <div>
@@ -442,7 +442,6 @@ GROUP BY datum`;
       <Spinner size="50" speed="750" color="#A82124" thickness="2" gap="40" />
     </p>
   {:then plot}
-    <div>{plot}</div>
   {:catch error}
     <p style="color: red">{error.message}</p>
   {/await}
