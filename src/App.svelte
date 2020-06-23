@@ -88,6 +88,7 @@
     justify-content: center;
     align-items: center;
     font-size: large;
+    font-size: 2vw;
     border-radius: 6px;
     border-bottom-right-radius: 3px;
   }
@@ -115,6 +116,7 @@
 
   .comparison-val {
     font-size: x-large;
+    font-size: 2vw;
     font-weight: bold;
   }
 </style>
@@ -140,11 +142,10 @@
             <img
               src={item.img_src}
               alt={item.desc}
-              style="width:100px; height:100px;" />
+              style="display: block; width: 100%; height: auto; max-height:100px; max-width:100px;" />
           </div>
           <div class="column" style="align:left;">
             {item.desc}
-            <br />
             <br />
             <div class="comparison-val">{item.val}</div>
           </div>
